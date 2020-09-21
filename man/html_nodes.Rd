@@ -44,21 +44,25 @@ exceptions are listed below:
 
 \itemize{
 \item Pseudo selectors that require interactivity are ignored:
-\code{:hover}, \code{:active}, \code{:focus}, \code{:target},
-\code{:visited}
+\verb{:hover}, \verb{:active}, \verb{:focus}, \verb{:target},
+\verb{:visited}
 \item The following pseudo classes don't work with the wild card element, *:
-\code{*:first-of-type}, \code{*:last-of-type}, \code{*:nth-of-type},
-\code{*:nth-last-of-type}, \code{*:only-of-type}
-\item It supports \code{:contains(text)}
-\item You can use !=, \code{[foo!=bar]} is the same as \code{:not([foo=bar])}
-\item \code{:not()} accepts a sequence of simple selectors, not just single
+\verb{*:first-of-type}, \verb{*:last-of-type}, \verb{*:nth-of-type},
+\verb{*:nth-last-of-type}, \verb{*:only-of-type}
+\item It supports \verb{:contains(text)}
+\item You can use !=, \verb{[foo!=bar]} is the same as \verb{:not([foo=bar])}
+\item \verb{:not()} accepts a sequence of simple selectors, not just single
 simple selector.
 }
 }
 
 \examples{
 # CSS selectors ----------------------------------------------
-ateam <- read_html("http://www.boxofficemojo.com/movies/?id=ateam.htm")
+url <- paste0(
+  "https://web.archive.org/web/20190202054736/",
+  "https://www.boxofficemojo.com/movies/?id=ateam.htm"
+)
+ateam <- read_html(url)
 html_nodes(ateam, "center")
 html_nodes(ateam, "center font")
 html_nodes(ateam, "center font b")

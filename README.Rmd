@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/rvest)](https://cran.r-project.org/package=rvest)
-[![Travis build status](https://travis-ci.org/tidyverse/rvest.svg?branch=master)](https://travis-ci.org/tidyverse/rvest)
+[![R build status](https://github.com/tidyverse/rvest/workflows/R-CMD-check/badge.svg)](https://github.com/tidyverse/rvest/actions)
 [![Codecov test coverage](https://codecov.io/gh/tidyverse/rvest/branch/master/graph/badge.svg)](https://codecov.io/gh/tidyverse/rvest?branch=master)
 <!-- badges: end -->
 
@@ -62,10 +62,7 @@ devtools::install_github("tidyverse/rvest")
 
 ## Key functions
 
-The most important functions in rvest are:
-
-* Create an html document from a url, a file on disk or a string containing
-  html with `read_html()`.
+Once you have read a HTML document with `read_html()`, you can:
 
 * Select parts of a document using CSS selectors: `html_nodes(doc, "table td")`
   (or if you've a glutton for punishment, use XPath selectors with
@@ -99,3 +96,7 @@ To see examples of these function in use, check out the demos.
 
 * Python: [RoboBrowser](http://robobrowser.readthedocs.org/en/latest/readme.html),
   [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/).
+  
+## Code of Conduct
+
+Please note that the rvest project is released with a [Contributor Code of Conduct](https://rvest.tidyverse.org/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.

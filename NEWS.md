@@ -1,3 +1,13 @@
+# rvest (development version)
+
+# rvest 0.3.6
+
+* Remove failing example
+
+# rvest 0.3.5
+
+* Use web archive to fix broken example.
+
 # rvest 0.3.4
 
 * Remove unneeded `read_xml.response()` method (#242).
